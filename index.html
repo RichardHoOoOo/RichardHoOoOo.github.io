@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+---
+<header class="site-header">
+  <div class="identity">
+    <a class="site-name" href="{{ '/' | relative_url }}" aria-label="Home">Jiajun Hu</a>
+    <nav class="social-links" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/jiajun-h-5953b4290/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=ULc_h20AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+      <a href="https://github.com/RichardHoOoOo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:jhuao@connect.ust.hk">Email</a>
+    </nav>
+  </div>
+  <nav class="tabs" aria-label="Main navigation" role="tablist">
+    <button class="tab is-active" id="tab-intro" role="tab" aria-selected="true" aria-controls="panel-intro" data-panel="intro">Intro</button>
+    <button class="tab" id="tab-blog" role="tab" aria-selected="false" aria-controls="panel-blog" data-panel="blog">Blog</button>
+    <button class="tab" id="tab-papers" role="tab" aria-selected="false" aria-controls="panel-papers" data-panel="papers">Papers</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Default view: photography gallery. Replace these sample paths with your own photographs. -->
+  <section class="panel gallery" id="panel-gallery" role="tabpanel" aria-labelledby="tab-gallery">
+    <figure class="photo photo-wide"><img src="{{ '/assets/photos/photo-03.jpeg' | relative_url }}" loading="eager"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-16.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-05.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-09.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-wide"><img src="{{ '/assets/photos/photo-11.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-07.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-01.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-08.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-wide"><img src="{{ '/assets/photos/photo-14.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-12.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-13.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-15.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-17.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-18.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-wide"><img src="{{ '/assets/photos/photo-19.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-23.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-21.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-tall"><img src="{{ '/assets/photos/photo-20.jpeg' | relative_url }}" loading="lazy"></figure>
+    <figure class="photo photo-wide"><img src="{{ '/assets/photos/photo-22.jpeg' | relative_url }}" loading="lazy"></figure>
+  </section>
+
+  <!-- Intro replaces the photo gallery completely when selected. -->
+  <section class="panel prose-panel" id="panel-intro" role="tabpanel" aria-labelledby="tab-gallery" hidden>
+    <p class="eyebrow">ABOUT</p>
+    <!-- <h1>Hello, I'm Your Name.</h1> -->
+    <!-- <p class="lead">I work on <em>research area / engineering</em>, with interests in machine learning, software engineering, and reliable AI systems.</p> -->
+    <h2>Experience</h2>
+    <div class="timeline-item"><span class="timeline-date">2024.4 — Present</span><div><strong>Researcher, Huawei Hong Kong Research Center</strong><p>My work focuses on reward modeling for code LLMs and coding agents, including training scalar reward models based on the Bradley–Terry model for code training data selection, and developing generalist reward models for coding-agent verification.</p></div></div>
+    <h2>Education</h2>
+    <div class="timeline-item"><span class="timeline-date">2016.9 — 2024.1</span><div><strong>Ph.D. in Computer Science, The Hong Kong University of Science and Technology</strong><p>Under the supervision of <a href="https://www.cse.ust.hk/~scc/" target="_blank" rel="noopener noreferrer">Prof. Shing-Chi Cheung</a>, my PhD research focused on Android hybrid programming, including empirical studies of cross-language bugs induced by WebViews and the development of bug detection techniques based on static and dynamic program analysis.</p></div></div>
+    <div class="timeline-item"><span class="timeline-date">2012.9 — 2016.7</span><div><strong>B.Eng. in Software Engineering, Yangzhou University</strong><p>Under the supervision of <a href="https://risame.github.io/sun/" target="_blank" rel="noopener noreferrer">Prof. Xiaobing Sun</a>, my undergraduate research focused on software evolution and comprehension, leveraging   unsupervised NLP techniques based on topic modeling to uncover patterns in software development histories.</p></div></div>
+    <h2>Research interests</h2>
+    <p>Reward Models · Post-Training · Coding LLMs and Agents · Data Curation · Software Engineering</p>
+  </section>
+
+  <section class="panel content-panel" id="panel-blog" role="tabpanel" aria-labelledby="tab-blog" hidden>
+    <div class="section-heading"><p class="eyebrow">WRITING</p><h1>Blog</h1><p class="lead">Notes on papers, research ideas, and things I'm learning.</p></div>
+    <div class="post-list">
+      {% assign posts = site.posts %}
+      {% for post in posts %}
+      <article class="post-row"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time><div><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.description %}<p>{{ post.description }}</p>{% endif %}{% if post.tags.size > 0 %}<div class="tags">{% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}</div></article>
+      {% else %}
+      <p class="empty-note">No posts yet. Add Markdown files to <code>_posts/</code> to publish your first note.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="panel content-panel" id="panel-papers" role="tabpanel" aria-labelledby="tab-papers" hidden>
+    <div class="section-heading"><p class="eyebrow">RESEARCH</p><h1>Selected Papers</h1><p class="lead">A selection of publications and ongoing work.</p></div>
+    <div class="paper-list">
+      {% for paper in site.data.papers %}
+      <article class="paper"><h2>{{ paper.title }}</h2><p class="authors">{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p><p class="venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</p>{% if paper.note %}<p>{{ paper.note }}</p>{% endif %}<div class="paper-links">{% if paper.paper_url %}<a href="{{ paper.paper_url }}">Paper</a>{% endif %}{% if paper.arxiv_url %}<a href="{{ paper.arxiv_url }}">arXiv</a>{% endif %}{% if paper.code_url %}<a href="{{ paper.code_url }}">Code</a>{% endif %}</div></article>
+      {% else %}<p class="empty-note">Add selected publications to <code>_data/papers.yml</code>.</p>{% endfor %}
+    </div>
+  </section>
+</main>

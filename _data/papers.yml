@@ -1,0 +1,37 @@
+- title: "SWE-Critix: Post-Training Generalist Verifiers for Assessing Coding-Agent Trajectories"
+  authors: "Jiajun Hu, Chun Yong Chong"
+  venue: "arXiv"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2610.13356v2"
+  code_url: "https://github.com/SWE-Critix/SWE-Critix"
+
+- title: "ωTest: WebView-Oriented Testing for Android Applications"
+  authors: "Jiajun Hu, Lili Wei, Yepang Liu, Shing-Chi Cheung"
+  venue: "32nd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2023)"
+  year: 2023
+  paper_url: "https://arxiv.org/abs/2306.03845"
+  code_url: "https://richardhooooo.github.io/wTest/"
+
+- title: "A Tale of Two Cities: How WebView Induces Bugs to Android Applications"
+  authors: "Jiajun Hu, Lili Wei, Yepang Liu, Shing-Chi Cheung, Huaxun Huang"
+  venue: " 33rd ACM/IEEE International Conference on Automated Software Engineering (ASE 2018)"
+  year: 2018
+  paper_url: "https://dl.acm.org/doi/pdf/10.1145/3238147.3238180"
+
+- title: "Modeling the Evolution of Development Topics Using Dynamic Topic Models"
+  authors: "Jiajun Hu, Xiaobing Sun, David Lo, Bin Li"
+  venue: " 22nd International Conference on Software Analysis, Evolution, and Reengineering (SANER 2015)"
+  year: 2015
+  paper_url: "https://ieeexplore.ieee.org/abstract/document/7081810"
+
+- title: "Explore the Evolution of Development Topics via On-Line LDA"
+  authors: "Jiajun Hu, Xiaobing Sun, Bin Li"
+  venue: " 22nd International Conference on Software Analysis, Evolution, and Reengineering (SANER 2015)"
+  year: 2015
+  paper_url: "https://ieeexplore.ieee.org/abstract/document/7081876"
+
+- title: "Empirical Studies on the NLP Techniques for Source Code Data Preprocessing"
+  authors: "Xiaobing Sun, Xiangyue Liu, Jiajun Hu, Junwu Zhu"
+  venue: " 3rd International Workshop on Evidential Assessment of Software Technologies (EAST 2014)"
+  year: 2014
+  paper_url: "https://dl.acm.org/doi/pdf/10.1145/2627508.2627514"

@@ -1,0 +1,9 @@
+title: "Jiajun Hu"
+description: "Personal homepage"
+url: "https://RichardHoOoOo.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins: []
+exclude:
+  - README.md
