@@ -5,20 +5,35 @@
 .article-page .back-link{display:inline-block;font-size:13px;color:#666;margin-bottom:40px}.article-body{font-size:17px;line-height:1.85}.article-body h2,.article-body h3{font-weight:400;margin-top:38px}.article-body pre{overflow:auto;padding:18px;background:#f6f5f3;font-size:13px;line-height:1.6}.article-body code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em}.article-body img{max-width:100%;height:auto}
 #back-to-top {
   position: fixed;
-  right: 24px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  padding: 10px 14px;
-  background: #333;
-  color: #fff;
+  padding: 8px 12px;
+  background: rgba(51, 51, 51, 0.45);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   border-radius: 6px;
-  font-size: 14px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+  font-size: 13px;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, background 0.2s ease;
 }
 
 #back-to-top:hover {
   opacity: 1;
+  background: rgba(51, 51, 51, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smaller button on narrow screens */
+@media (max-width: 768px) {
+  #back-to-top {
+    right: 8px;
+    padding: 6px 8px;
+    font-size: 11px;
+    opacity: 0.45;
+  }
 }
