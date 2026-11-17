@@ -45,10 +45,9 @@
     // The default landing view is the photo gallery, while Intro remains the first tab.
     Object.values(panels).forEach(panel => { if (panel) panel.hidden = panel.id !== 'panel-gallery'; });
     tabs.forEach(tab => {
-      const active = tab.dataset.panel === 'intro';
-      tab.classList.toggle('is-active', active);
-      tab.setAttribute('aria-selected', String(active));
-      tab.tabIndex = active ? 0 : -1;
+      tab.classList.remove('is-active');
+      tab.setAttribute('aria-selected', 'false');
+      tab.tabIndex = 0;
     });
   }
 })();
